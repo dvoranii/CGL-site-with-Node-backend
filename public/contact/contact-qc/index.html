@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/contact.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/CGL-logo.png" alt="Home" title="Home" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/" class="nav__link" data-link>Home</a></li>
+        <li><a href="/about" class="nav__link" data-link>About</a></li>
+        <li>
+          <a href="#" data-link class="transportation-link">Services&nbsp;▾</a>
+          <ul class="transportation-submenu">
+            <li class="transportation-submenu-wrapper">
+              <a
+                href="/services/transportation"
+                data-link
+                class="transportation-link"
+                >Transportation&nbsp;</a
+              >
+              <ul class="transportation-submenu-a">
+                <li><a href="/services/transportation/air">Air</a></li>
+                <li><a href="/services/transportation/ocean">Ocean</a></li>
+                <li><a href="/services/transportation/truck">Truck</a></li>
+                <li>
+                  <a href="/services/transportation/warehouse">Warehouse</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/services/sporting-goods" data-link
+                >Hockey &<br />
+                Sporting Goods</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/request" data-link>Request&nbsp;a&nbsp;Quote</a>
+        </li>
+        <li>
+          <a href="#" class="contact-link">Contact&nbsp;▾</a>
+          <ul class="contact-submenu">
+            <li><a href="/contact/contact-on/" data-link>Ontario Office</a></li>
+            <li>
+              <a href="/contact/contact-qc" class="nav__link" data-link
+                >Quebec Office</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="title-wrapper">
+        <img src="/assets/globe-icon-img.png" />
+        <h1>QUEBEC</h1>
+      </div>
+      <div class="contact-wrapper">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.274021498357!2d-73.70997368420674!3d45.46428367910094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc917c9e04bb3f3%3A0xbe7ab3ff94855d8d!2s2105%20Rue%20On%C3%A9sime%20Gagnon%2C%20Lachine%2C%20QC%20H8T%203M7!5e0!3m2!1sen!2sca!4v1666302875316!5m2!1sen!2sca"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="contact-info">
+          <h3>CARGO DELIVERY YYZ:</h3>
+          <br />
+          <address>
+            2105 Rue Onesime-Gagnon<br />
+            Lachine, Quebec<br />
+            H8T 3M7<br /><br />
+            E-MAIL:
+            <a
+              href="mailto:opsyyz@CanadianGlobalLogistics.ca
+          "
+              >opsyyz@CanadianGlobalLogistics.ca
+            </a>
+          </address>
+          <br />
+
+          <h3>OFFICE MAILING ADDRESS:</h3>
+          <br />
+          <address>
+            6-3633 Rue Aylmer<br />
+            Montreal, Quebec<br />
+            H2X 2C3<br /><br />
+            OFFICE: <a href="tel:5142440879">514-244-0879</a><br /><br />
+            E-MAIL:
+            <a
+              href="mailto:Sharri@CanadianGlobalLogistics.ca
+          "
+              > Sharri@CanadianGlobalLogistics.ca
+            </a>
+          </address>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper-outer">
+        <div class="contact-form-wrapper-inner">
+          <h2>Contact Us</h2>
+          <form action="">
+            <!-- <label for="name">Name:</label> -->
+            <input type="text" name="name" placeholder="name" /><br />
+            <!-- <label for="email">Email:</label> -->
+            <input type="text" name="email" placeholder="email" /><br />
+            <!-- <label for="message">Message:</label> -->
+            <textarea
+              name="message"
+              id="contact-msg"
+              cols="30"
+              rows="10"
+              placeholder="message"
+            ></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

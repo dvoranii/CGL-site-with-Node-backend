@@ -1,0 +1,389 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* NAV */
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
+
+.burger {
+  display: none;
+  padding: 10px;
+  z-index: 99999;
+}
+
+.header-logo {
+  padding: 20px;
+}
+
+.logo img {
+  width: clamp(200px, 40vw, 300px);
+  height: fit-content;
+  padding: 20px 10px;
+}
+
+.hero-logo {
+  max-width: 80vw;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.5)),
+    url("/assets/ocean.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: grey;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.nav-links a {
+  /* padding: 10px; */
+  color: rgba(255, 226, 226);
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  transition: all 150ms ease;
+}
+
+.nav-links a:hover {
+  color: rgb(10, 6, 255);
+}
+
+/* do some dropdown menu animations */
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeInSlideLeft {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
+  }
+}
+
+.contact-submenu,
+.transportation-submenu {
+  position: absolute;
+  list-style: none;
+  opacity: 0;
+  background: black;
+  padding: 10px 0px 10px 10px;
+}
+
+.contact-submenu {
+  padding: 10px;
+}
+
+.contact-link:hover + .contact-submenu,
+.contact-submenu:hover {
+  animation: fadeInSlideDown 0.5s ease forwards;
+}
+
+.transportation-link:hover + .transportation-submenu,
+.transportation-submenu:hover {
+  animation: fadeInSlideDown 0.5s ease forwards;
+}
+
+.transportation-submenu-wrapper {
+  position: relative;
+}
+
+.transportation-submenu-a {
+  list-style: none;
+  position: absolute;
+  right: -83%;
+  top: -10px;
+  background: black;
+  padding: 10px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.transportation-link:hover + .transportation-submenu-a,
+.transportation-submenu-a:hover {
+  animation: fadeInSlideDown 0.5s ease forwards;
+  pointer-events: all;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 2.4rem 0 2.4rem 0;
+}
+
+.title-wrapper.sporting-title-wrapper {
+  margin-bottom: 3.2rem;
+  padding: 2.4rem 0 2.4rem 0;
+  background-color: rgb(112, 112, 112);
+  justify-content: center;
+}
+
+.title-wrapper img {
+  width: 90px;
+  height: auto;
+}
+
+.service-freight-wrapper {
+  display: flex;
+  align-items: center;
+}
+.service-freight-wrapper p {
+  padding-left: 20px;
+}
+.service-freight-wrapper img {
+  width: 30vw;
+}
+
+.title-wrapper.sporting-title-wrapper p {
+  padding-left: 1.2rem;
+}
+
+.warehouse-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+.warehouse-wrapper img {
+  max-width: 80%;
+}
+
+.warehouse-list {
+  padding-left: 1.8rem;
+  padding-top: 1.2rem;
+}
+
+.sporting-goods-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.sporting-goods-grid img {
+  max-width: 400px;
+  width: 100%;
+}
+
+.air-service-cell img {
+  grid-column: 1;
+}
+
+.air-service-cell p {
+  grid-column: 2;
+}
+
+.sporting-goods-grid p {
+  padding-top: 3.2rem;
+  padding-left: 1.2rem;
+}
+
+.sporting-goods-grid h2 {
+  padding-bottom: 1.2rem;
+}
+
+.sporting-goods-grid div {
+  max-height: 400px;
+}
+
+.hero-logo {
+  max-width: 80vw;
+}
+
+.grid-cell img {
+  max-width: 30vw;
+}
+/* body */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 9.6rem;
+}
+.form-wrapper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.form-wrapper-grid input,
+.pickup-info-textarea,
+.shipping-info-textarea {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+
+.number-pieces,
+.number-skids {
+  width: 49% !important;
+}
+
+.shipment-service-type,
+.hs-codes {
+  width: 49% !important;
+}
+
+.shippment-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.spacer {
+  grid-column: span 2;
+}
+
+.cell1,
+.cell2,
+.cell3 {
+  height: 50%;
+  margin-top: 1.2rem !important;
+  width: 98% !important;
+}
+
+input.checkbox {
+  width: 20%;
+}
+
+.checkbox-label {
+  font-size: 12px;
+}
+
+.skid-dimensions input {
+  width: 32% !important;
+}
+
+.additional-info {
+  grid-column: span 2;
+  margin-top: 1.2rem;
+}
+.additional-info textarea {
+  width: 100%;
+}
+
+.contact-submenu,
+.transportation-submenu {
+  position: absolute;
+  list-style: none;
+  opacity: 0;
+  background: black;
+  margin-top: -4px;
+  /* padding: 10px; */
+}
+
+.contact-link:hover + .contact-submenu,
+.contact-submenu:hover {
+  animation: fadeInSlideDown 0.5s ease forwards;
+}
+
+.transportation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    width: 50%;
+    transform: translateX(100%);
+    transition: all 500ms ease;
+  }
+
+  .nav__link {
+    opacity: 0;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.line1,
+.line2,
+.line3 {
+  transition: all 150ms ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/CGL-logo.png" alt="Home" title="Home" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li class="nav__link"><a href="/" data-link>Home</a></li>
+        <li class="nav__link"><a href="/about" data-link>About</a></li>
+        <li class="nav__link">
+          <a
+            href="#"
+            data-link
+            class="transportation-link"
+            >Services&nbsp;▾</a
+          >
+          <ul class="transportation-submenu">
+            <li class="transportation-submenu-wrapper">
+              <a
+                href="/services/transportation"
+                data-link
+                class="transportation-link"
+                >Transportation▾</a
+              >
+              <ul class="transportation-submenu-a">
+                <li><a href="/services/transportation/air">Air</a></li>
+                <li><a href="/services/transportation/ocean">Ocean</a></li>
+                <li><a href="/services/transportation/truck">Truck</a></li>
+                <li>
+                  <a href="/services/transportation/warehouse">Warehouse</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/services/sporting-goods" data-link
+                >Hockey &<br />
+                Sporting Goods</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="nav__link">
+          <a href="/request" data-link>Request&nbsp;a&nbsp;Quote</a>
+        </li>
+        <li class="nav__link">
+          <a href="#" class="contact-link">Contact&nbsp;▾</a>
+          <ul class="contact-submenu">
+            <li><a href="/contact/contact-on" data-link>Ontario Office</a></li>
+            <li>
+              <a href="/contact/contact-qc" data-link
+                >Quebec Office</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="title-wrapper">
+        <h1>Transportation Services</h1>
+      </div>
+
+      <div class="transportation-grid">
+        <div class="air grid-cell">
+            <div class="title-wrapper">
+                <img src="/assets/plane-icon.webp" />
+                <h2>Air Freight</h2>
+              </div>
+          <a href="/services/transportation/air"
+            ><img src="/assets/plane.jpg"
+          /></a>
+        </div>
+        <div class="ocean grid-cell">
+            <div class="title-wrapper">
+                <img src="/assets/boat-icon.png" />
+                <h2>Ocean Freight</h2>
+              </div>
+        
+          <a href="/services/transportation/ocean"><img src="/assets/ocean.webp"
+            /></a>
+            
+        </div>
+        <div class="truck grid-cell">
+            <div class="title-wrapper">
+                <img src="/assets/truck-icon.png" />
+                <h2>Truck Freight</h2>
+              </div>
+          <a href="/services/transportation/truck"><img src="/assets/truck.webp" /></a></a>
+          
+        </div>
+        <div class="warehouse grid-cell">
+            <div class="title-wrapper">
+                <img src="/assets/open-box.png" />
+                <h2>Warehouse</h2>
+              </div>
+        
+          <a href="/services/transportation/warehouse"> <img src="/assets/warehouse.webp" /></a>
+         
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

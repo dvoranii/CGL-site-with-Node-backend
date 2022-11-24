@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/contact.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/CGL-logo.png" alt="Home" title="Home" />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/" class="nav__link" data-link>Home</a></li>
+        <li><a href="/about" class="nav__link" data-link>About</a></li>
+        <li>
+          <a href="#" data-link class="transportation-link">Services&nbsp;▾</a>
+          <ul class="transportation-submenu">
+            <li class="transportation-submenu-wrapper">
+              <a
+                href="/services/transportation/"
+                data-link
+                class="transportation-link"
+                >Transportation▾</a
+              >
+              <ul class="transportation-submenu-a">
+                <li><a href="/services/transportation/air">Air</a></li>
+                <li><a href="/services/transportation/ocean">Ocean</a></li>
+                <li><a href="/services/transportation/truck">Truck</a></li>
+                <li>
+                  <a href="/services/transportation/warehouse">Warehouse</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/services/sporting-goods" data-link
+                >Hockey &<br />
+                Sporting Goods</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/request" data-link>Request&nbsp;a&nbsp;Quote</a>
+        </li>
+        <li>
+          <a href="#" class="contact-link">Contact&nbsp;▾</a>
+          <ul class="contact-submenu">
+            <li><a href="/contact/contact-on" data-link>Ontario Office</a></li>
+            <li>
+              <a href="/contact/contact-qc" class="nav__link" data-link
+                >Quebec Office</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="title-wrapper">
+        <img src="/assets/globe-icon-img.png" />
+        <h1>ONTARIO</h1>
+      </div>
+      <div class="contact-wrapper">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.2629547488655!2d-79.70124408411675!3d43.642697179121576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3f9cf5df3f69%3A0xa7f9f217d07e3f26!2s65%20Superior%20Blvd%2C%20Mississauga%2C%20ON%20L5T%202X9!5e0!3m2!1sen!2sca!4v1666275704809!5m2!1sen!2sca"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="contact-info">
+          <h3>CARGO DELIVERY YYZ:</h3>
+          <br />
+          <address>
+            65 Superior Blvd, Unit #2<br />
+            Mississauga, Ontario<br />
+            L5T 2X9<br /><br />
+            E-MAIL:
+            <a
+              href="mailto:opsyyz@CanadianGlobalLogistics.ca
+          "
+              >opsyyz@CanadianGlobalLogistics.ca
+            </a>
+          </address>
+
+          <h3>OFFICE MAILING ADDRESS:</h3>
+          <br />
+          <address>
+            46 Tiffany Lane,<br />
+            Georgetown, Ontario<br />
+            L7G 0H1<br /><br />
+            OFFICE: <a href="tel:6472373811">647-237-3811</a><br /><br />
+            E-MAIL:
+            <a
+              href="mailto:Cindy@CanadianGlobalLogistics.ca
+          "
+              > Cindy@CanadianGlobalLogistics.ca
+            </a>
+          </address>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper-outer">
+        <div class="contact-form-wrapper-inner">
+          <h2>Contact Us</h2>
+          <form action="">
+            <!-- <label for="name">Name:</label> -->
+            <input type="text" name="name" placeholder="name" /><br />
+            <!-- <label for="email">Email:</label> -->
+            <input type="text" name="email" placeholder="email" /><br />
+            <!-- <label for="message">Message:</label> -->
+            <textarea
+              name="message"
+              id="contact-msg"
+              cols="30"
+              rows="10"
+              placeholder="message"
+            ></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
