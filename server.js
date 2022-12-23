@@ -8,6 +8,7 @@ const port = 8383;
 const apiKey = process.env.API_KEY;
 
 app.use(express.static("public"));
+
 app.get("/info", (req, res) => {
   res.status(200).json({ text: `${apiKey}` });
 });

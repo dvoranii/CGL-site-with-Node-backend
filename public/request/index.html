@@ -73,130 +73,130 @@
       </div>
     </nav>
 
-    <form class="form-wrapper-grid" id="myForm" method="POST" action="" data-netlify="true">
-        <div class="company-info-a">
-          <label for="">Company Information</label>
-          <input name="name" id="fullName" type="text" placeholder="*Your Name" required/>
-          <input name="companyName" id="companyName" type="text" placeholder="Company Name" required />
-        </div>
-        <div class="company-info-b">
-          <label for="">&nbsp;</label>
-        
-          <input name="email" id="email" type="email" placeholder="email" required/>
-          <input name="phone" id="phone" type="tel" placeholder="*Phone number" required />
-        </div>
 
-        <div class="pickup-info">
-          <br />
-          <label for="">Pickup Information</label>
-          <textarea
-          id="pickupInfo"
-            class="pickup-info-textarea"
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="* Pick up address or origin Airport port"
-            name="pickupInfo"
-          ></textarea>
-        </div>
+<div class="container">
 
-        <div class="shipping-info">
-          <br />
-          <label for="">Shipping Information</label>
-          <textarea
-          id="shippingInfo"
-            class="shipping-info-textarea"
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="* Shipping address, origin or airport port"
-            name="shippingInfo"
-          ></textarea>
-        </div>
+  <form class="form-wrapper-grid" id="myForm" method="POST" action="" data-netlify="true">
+    <div class="company-info-a">
+      <label for="">Company Information</label>
+      <input name="name" id="fullName" type="text" placeholder="*Your Name" required/>
+      <input name="companyName" id="companyName" type="text" placeholder="Company Name" required />
+    </div>
+    <div class="company-info-b">
+      <label for="">&nbsp;</label>
+    
+      <input name="email" id="email" type="email" placeholder="email" required/>
+      <input name="phone" id="phone" type="tel" placeholder="*Phone number" required />
+    </div>
 
-        <!-- ------------------------------ -->
-        <div class="shippment-details">
-          <br />
-          <p>Shipment Details</p>
-          <input
-            type="text"
-            placeholder="* Number of skids"
-            class="number-skids"
-            name="numSkids"
-          />
-          <input
-            type="text"
-            placeholder="* Number of pieces"
-            class="number-pieces"
-            name="numPieces"
-          />
-          <select
-            name=""
-            id=""
-            placeholder="* Service"
-            class="shipment-service-type"
-            name="serviceType"
-          >
-            <option value="" selected disabled hidden>* Service</option>
-            <option value="">Air</option>
-            <option value="">Ocean</option>
-          </select>
-          <input
-            type="text"
-            placeholder="Commodity and HS Codes"
-            class="hs-codes"
-            name="hsCodes"
-          />
-        </div>
-        <!-- ------------------------------ -->
+    <div class="pickup-info">
+      <br />
+      <label for="">Pickup Information</label>
+      <textarea
+      id="pickupInfo"
+        class="pickup-info-textarea"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="* Pick up address or origin Airport port"
+        name="pickupInfo"
+      ></textarea>
+    </div>
 
-        <div class="shippment-cont">
-          <p class="spacer">&nbsp;</p>
-          <input type="text" class="cell1 weight" placeholder="* Weight"></input>
-          <select name="" id="" class="cell2 weight-units" name="weight">
-            <option value="" selected disabled hidden>* Units Lbs or Kg</option>
-            <option value="">Lbs</option>
-            <option value="">Kg</option>
-          </select>
-          <select name="" id="" class="cell3 hazardous" name="hazardous">
+    <div class="shipping-info">
+      <br />
+      <label for="">Shipping Information</label>
+      <textarea
+      id="shippingInfo"
+        class="shipping-info-textarea"
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="* Shipping address, origin or airport port"
+        name="shippingInfo"
+      ></textarea>
+    </div>
 
-            <option value="" selected disabled hidden>* Hazardous Yes or No</option>
-            <option value="">Hazardous - YES</option>
-            <option value="">Hazardous - NO</option>
-          </select>
-          <div class="checkbox-wrapper" class="cell4">
-           
-            <input type="checkbox" class="checkbox" name="personal">
-            <label for="" class="checkbox-label">Non Personal Effects</label>
-          </div>
-        </div>
+    <!-- ------------------------------ -->
+    <div class="shippment-details">
+      <br />
+      <p>Shipment Details</p>
+      <input
+        type="text"
+        placeholder="* Number of skids"
+        class="number-skids"
+        name="numSkids"
+      />
+      <input
+        type="text"
+        placeholder="* Number of pieces"
+        class="number-pieces"
+        name="numPieces"
+      />
+      <select
+        name=""
+        id=""
+        class="shipment-service-type"
+        name="serviceType"
+      >
+        <!-- <option value="" disabled hidden>* Service</option> -->
+        <option value="">Air</option>
+        <!-- have to make sure to set selected dynamically when user inputs it  -->
+        <option value="" selected>Ocean</option>
+      </select>
+      <input
+        type="text"
+        placeholder="Commodity and HS Codes"
+        class="hs-codes"
+        name="hsCodes"
+      />
+    </div>
+    <!-- ------------------------------ -->
 
-        <div class="skid-type-wrapper">
+    <div class="shippment-cont">
+      <p class="spacer">&nbsp;</p>
+      <input type="text" class="cell1 weight" placeholder="* Weight"></input>
+      <select name="" id="" class="cell2 weight-units" name="weight">
+        <option value="" selected disabled hidden>* Units Lbs or Kg</option>
+        <option value="">Lbs</option>
+        <option value="">Kg</option>
+      </select>
+      <select name="" id="" class="cell3 hazardous" name="hazardous">
 
-        </div>
+        <option value="" selected disabled hidden>* Hazardous Yes or No</option>
+        <option value="">Hazardous - YES</option>
+        <option value="">Hazardous - NO</option>
+      </select>
+      <div class="checkbox-wrapper" class="cell4">
+       
+        <input type="checkbox" class="checkbox" name="personal">
+        <label for="" class="checkbox-label">Non Personal Effects</label>
+      </div>
+    </div>
 
-        <div class="skid-dimensions">
+    <div class="skid-type-wrapper">
 
-        </div>
+    </div>
 
-        <div class="additional-info">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Additional information or Special instructions" name="additionalInfo"></textarea>
-        </div>
+    <div class="skid-dimensions">
 
-        <div class="submit-btn-container">
-            <button type="submit" class="submit" id="submit">SUBMIT</button>
-          <!-- <button type="submit" class="submit">SUBMIT</button> -->
-        </div>
-        <div class="clear-btn-container">
-          <button type="reset">CLEAR</button>
-        </div>
-      </form>
-    <input type="text" id="input" />
-    <!-- <button id="submit">GET</button> -->
-    <button id="post">POST</button>
+    </div>
 
+    <div class="additional-info">
+      <textarea name="" id="" cols="30" rows="10" placeholder="Additional information or Special instructions" name="additionalInfo"></textarea>
+    </div>
+
+    <div class="submit-btn-container">
+        <button type="submit" class="submit" id="submit">SUBMIT</button>
+      <!-- <button type="submit" class="submit">SUBMIT</button> -->
+    </div>
+    <div class="clear-btn-container">
+      <button type="reset">CLEAR</button>
+    </div>
+  </form>
+</div>
     <script type="module" src="../app.js"></script>
   </body>
 </html>

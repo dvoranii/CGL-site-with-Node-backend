@@ -13,7 +13,9 @@ const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav__link");
 
 const numPieces = document.querySelector(".number-pieces");
+
 const shipmentServiceType = document.querySelector(".shipment-service-type");
+
 const hsCodes = document.querySelector(".hs-codes");
 const weight = document.querySelector(".weight");
 const weightUnits = document.querySelector(".weight-units");
@@ -25,6 +27,7 @@ const phone = document.getElementById("phone");
 const companyName = document.getElementById("companyName");
 const pickupInfo = document.getElementById("pickupInfo");
 const shippingInfo = document.getElementById("shippingInfo");
+const additionalInfo = document.querySelector(".additional-info textarea");
 const numSkids = document.querySelector(".number-skids");
 const skidDimensions = document.querySelector(".skid-dimensions");
 const skidTypeWrapper = document.querySelector(".skid-type-wrapper");
@@ -111,7 +114,6 @@ function getFormValues() {
     });
   });
 
-  console.log(arrInput);
   return arrInput;
 }
 
@@ -121,12 +123,30 @@ if (submitBtn) {
   });
 }
 
-async function addDocument_AutoID(inputs = "", ref = "") {
+async function addDocument_AutoID(numSkids = "", ref = "") {
+  if (!shipmentServiceType) {
+    return;
+  }
+  // let typeValue = shipmentServiceType.value;
+  let typeText =
+    shipmentServiceType.options[shipmentServiceType.selectedIndex].text;
+
   const docRef = await addDoc(ref, {
-    amount: 789,
-    details: "Some details about the new doc",
-    anotherField: "another field",
-    skid: inputs,
+    fullName: fullName.value,
+    companyName: companyName.value,
+    email: email.value,
+    phone: phone.value,
+    pickupInfo: pickupInfo.value,
+    shippingInfo: shippingInfo.value,
+    numSkids: numSkids,
+    numPieces: numPieces.value,
+    shipmentServiceType: typeText,
+    hsCodes: hsCodes.value,
+    weight: weight.value,
+    weightUnits: weightUnits.value,
+    hazardous: hazardous.value,
+    checkbox: checkbox.value,
+    additionalInfo: additionalInfo.value,
   })
     .then(() => {
       alert("Data added successfully");
@@ -143,7 +163,6 @@ async function saveForm(e) {
   });
 
   const data = await res.json();
-  console.log(data);
   const collRef = initFirebase(data.text);
   let inputs = getFormValues();
 
